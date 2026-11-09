@@ -1,0 +1,489 @@
+
+/* 기본 설정 */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    background-color: white;
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+/* 상단 메뉴 */
+.header {
+    width: 100%;
+    padding: 30px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+/* 화면 상단에 고정 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+   background-color: transparent;
+}
+/* 작가 이름 */
+.logo {
+    font-size: 24px;
+    color: #8295a1;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 메뉴 */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: clamp(12px, 2vw, 32px);
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #8295a1;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+/* 메인 이미지 */
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 120px 20px 0;
+}
+
+.main img {
+    width: min(42vw, 650px);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 4px;
+}
+/* Contact 팝업 배경 */
+.contact-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contact 창 */
+.contact-window {
+    position: relative;
+
+    width: min(800px, 85vw);
+    height: min(500px, 70vh);
+
+    background: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #8295a1;
+    font-family: Georgia, serif;
+}
+
+/* Contact 제목 */
+.contact-window h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 70px;
+}
+
+/* 이메일 및 인스타그램 */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-links a {
+    color: #8295a1;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* 마우스 올렸을 때 */
+.contact-links a:hover {
+    opacity: 0.6;
+}
+
+/* 닫기 버튼 */
+.contact-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    border: none;
+    background: none;
+
+    color: #8295a1;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* CV 팝업 배경 */
+.cv-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+/* CV 창 */
+.cv-window {
+    position: relative;
+
+    width: min(1000px, 88vw);
+    height: min(750px, 85vh);
+
+    background: white;
+
+    padding: 65px 60px;
+
+    overflow-y: auto;
+
+    color: #295a71;
+    font-family: Georgia, serif;
+}
+
+/* 닫기 버튼 */
+.cv-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+
+    border: none;
+    background: none;
+
+    color: #8295a1;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+/* 언어 선택 */
+.cv-language {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.cv-language button {
+    border: none;
+    background: none;
+
+    padding: 0;
+
+    color: #a0a0a0;
+    font-family: Georgia, serif;
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.cv-language button.active {
+    color: #295a71;
+    text-decoration: underline;
+}
+
+/* CV 프로필 */
+.cv-profile {
+    margin-bottom: 65px;
+}
+
+.cv-profile h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 0 12px;
+}
+
+.cv-profile p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* CV 항목 */
+.cv-section {
+    margin-bottom: 45px;
+}
+
+.cv-section h2 {
+    font-size: 25px;
+    font-weight: normal;
+    margin: 0 0 25px;
+}
+
+/* 연도와 내용 */
+.cv-entry {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.cv-entry p {
+    margin: 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 600px) {
+    .cv-window {
+        width: 94vw;
+        height: 85vh;
+        padding: 55px 25px;
+    }
+
+    .cv-entry {
+        grid-template-columns: 65px 1fr;
+        gap: 10px;
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+/* =========================
+   WORK PAGE
+========================= */
+
+.work-main {
+    width: 100%;
+    padding-top: 124px;
+    padding-bottom: 100px;
+}
+
+/* 4열 그리드 */
+.artwork-grid {
+    display: grid;
+
+    width: max-content;
+    max-width: 100%;
+    margin: 0 auto;
+
+    /* 각 이미지의 폭에 맞춘 열 */
+   grid-template-columns: 224px 174px 228px 228px;
+    column-gap: 18px;
+    row-gap: 50px;
+
+    align-items: start;
+}
+
+/* 작품 카드 */
+.artwork-card {
+    width: 100%;
+    min-width: 0;
+}
+
+/* 작품 이미지 */
+.artwork-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* 작품 정보 */
+.artwork-info {
+    width: 100%;
+    padding-top: 12px;
+
+    color: #8295a1;
+    font-family: Georgia, serif;
+    font-size: 14px;
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* 작품명 */
+.artwork-info h3 {
+    margin: 0;
+    color: #295a71;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+/* 작품 설명 */
+.artwork-info p {
+    margin: 0;
+}
+/* WORK 페이지 텍스트 조정 */
+
+.artwork-info h3 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.artwork-info p {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.artwork-info {
+    color: #91a4af;
+}
+
+/* 현재 활성화된 메뉴 */
+.navigation a.active {
+    opacity: 0.4;
+}
+
+/* 메뉴 전환 효과 */
+.navigation a {
+    transition: opacity 0.3s ease;
+}
+/* DETAIL PAGE */
+
+.detail-main {
+    width: 100%;
+    padding: 150px 4% 100px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.detail-info {
+    color: #8295a1;
+    font-family: Georgia, serif;
+}
+
+.detail-info h1 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0 0 20px;
+}
+
+.detail-info p {
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.detail-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+/* DETAIL PAGE */
+
+.detail-main {
+    width: 100%;
+    padding: 70px 0 100px;
+    display: block;
+}
+
+.detail-info {
+    width: 300px;
+    margin-left: 15.5%;
+    color: #8295a1;
+}
+
+.detail-info h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 28px;
+}
+
+.detail-info p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.detail-info p:last-child {
+    margin-top: 20px;
+}
+
+.detail-images {
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+
+.detail-images img {
+    display: block;
+    width: auto;
+    max-width: none;
+    height: auto;
+}
+
+.detail-images img:first-child {
+    width: 22.425vw;
+}
+
+.detail-images img:nth-child(2) {
+    width: 33.52vw;
+}
+
+.detail-images img:nth-child(3) {
+    width: 27.29vw;
+}
+/* 작품 캡션 고정 */
+
+.detail-info {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+}
+
+/* WORK 페이지 캡션 투명도 */
+
+.artwork-info {
+    opacity: 0.3;
+}
+/* GLOBAL TYPOGRAPHY */
+
+body,
+body * {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-variant-numeric: lining-nums tabular-nums;
+}
