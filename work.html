@@ -1,47 +1,45 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>okseoyeon — work</title>
 
+    <!-- CSS 연결 -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    
     <!-- 상단 메뉴 -->
-<header class="header">
+    <header class="header">
 
-    <div class="logo">
-        <a href="index.html">okseoyeon</a>
-    </div>
+        <div class="logo">
+            <a href="index.html">okseoyeon</a>
+        </div>
 
-    <nav class="navigation">
-        <a href="work.html" class="active">work</a>
-        <a href="#" id="cv-open">cv</a>
-        <a href="#" id="contact-open">contact</a>
-    </nav>
+        <nav class="navigation">
+            <a href="work.html" class="active">work</a>
+            <a href="#" id="cv-open">cv</a>
+            <a href="#" id="contact-open">contact</a>
+        </nav>
 
-</header>
+    </header>
 
-<!-- Contact 팝업 -->
+
+    <!-- Contact 팝업 -->
     <div class="contact-modal" id="contact-modal">
 
         <div class="contact-window">
 
-            <button class="contact-close" id="contact-close">
-                ×
-            </button>
+            <button class="contact-close" id="contact-close">×</button>
 
             <h2>contact</h2>
 
             <div class="contact-links">
-
                 <a href="mailto:ok402ooo@gmail.com">
                     ok402ooo@gmail.com
                 </a>
@@ -50,32 +48,24 @@
                    target="_blank">
                     @ok.sy.oo.o
                 </a>
-
             </div>
 
         </div>
 
     </div>
- <!-- CV 팝업 -->
+
+
+    <!-- CV 팝업 -->
     <div class="cv-modal" id="cv-modal">
 
         <div class="cv-window">
 
             <button class="cv-close" id="cv-close">×</button>
 
-            <!-- 언어 선택 -->
             <div class="cv-language">
-
-                <button class="active" data-lang="eng">
-                    ENG
-                </button>
-
-                <button data-lang="kor">
-                    KOR
-                </button>
-
+                <button class="active" data-lang="eng">ENG</button>
+                <button data-lang="kor">KOR</button>
             </div>
-
 
             <!-- English CV -->
             <div class="cv-content" id="cv-eng">
@@ -86,7 +76,6 @@
                 </section>
 
                 <section class="cv-section">
-
                     <h2>Group Exhibitions</h2>
 
                     <div class="cv-entry">
@@ -96,11 +85,9 @@
                             Baeryeom House, Seoul
                         </p>
                     </div>
-
                 </section>
 
             </div>
-
 
             <!-- Korean CV -->
             <div class="cv-content" id="cv-kor" hidden>
@@ -111,7 +98,6 @@
                 </section>
 
                 <section class="cv-section">
-
                     <h2>단체전</h2>
 
                     <div class="cv-entry">
@@ -121,7 +107,6 @@
                             배렴가옥, 서울
                         </p>
                     </div>
-
                 </section>
 
             </div>
@@ -131,74 +116,264 @@
     </div>
 
 
-    <!-- Work 페이지 -->
-    <main class="work-main">
+   
 
-        <div class="artwork-grid">
+<!-- Work 페이지 -->
+<main class="work-main">
 
-            <!-- 1. Pane-mirage_afterimage -->
-            <div class="artwork-card">
-                <img src="assets/Pane-mirage_afterimage.jpg"
-                     alt="Pane-mirage_afterimage">
+    <div class="artwork-grid">
 
+        <!-- 1. Vitrine-mirage -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="vitrine-mirage7628.jpg"
+                alt="vitrine-mirage7628">
+
+            <div class="artwork-info">
+                <h3>vitrine-mirage7628.jpg</h3>
+                <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 91 × 37.9 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 2. Vitrine_99 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="Vitrine_99.heic"
+                alt="Vitrine_99">
+
+            <div class="artwork-info">
+                <h3>Vitrine_99.heic</h3>
+                <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 185 × 25 cm</p>
+            </div>
+        </div>
+
+
+        <!-- Pane-mirage 연작 4개 -->
+        <div class="pane-row">
+
+            <!-- 3. Pane-mirage_afterimage -->
+            <div class="artwork-card pane-card">
+                <a href="afterimage.html">
+                    <img
+                        data-arena-filename="Pane-mirage_afterimage.jpg"
+                        alt="Pane-mirage_afterimage">
+                </a>
                 <div class="artwork-info">
                     <h3>Pane-mirage_afterimage</h3>
-                    <p>2026 장지에 아크릴 과슈 Acrylic gouache on two-ply Jangji (Korean paper) 240×110 cm</p>
+                    <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 240 × 110 cm</p>
                 </div>
             </div>
 
-
-            <!-- 2. Pane-mirage_P7050013 -->
-            <div class="artwork-card">
-                <img src="assets/Pane-mirage_P7050013.jpg"
-                     alt="Pane-mirage_P7050013">
-
+            <!-- 4. Pane-mirage_P7050013 -->
+            <div class="artwork-card pane-card">
+                <a href="P7050013.html">
+                    <img
+                        data-arena-filename="Pane-mirage_P7050013.jpg"
+                        alt="Pane-mirage_P7050013">
+                </a>
                 <div class="artwork-info">
                     <h3>Pane-mirage_P7050013</h3>
-                    <p>2026 장지에 아크릴 과슈 Acrylic gouache on two-ply Jangji (Korean paper) 240×90 cm</p>
+                    <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 240 × 90 cm</p>
                 </div>
             </div>
 
-
-            <!-- 3. Pane-mirage_2026041411 -->
-            <div class="artwork-card">
-                <img src="assets/Pane-mirage_2026041411.png"
-                     alt="Pane-mirage_2026041411">
-
+            <!-- 5. Pane-mirage_2026041411 -->
+            <div class="artwork-card pane-card">
+                <a href="2026041411.html">
+                    <img
+                        data-arena-filename="Pane-mirage_2026041411.png"
+                        alt="Pane-mirage_2026041411">
+                </a>
                 <div class="artwork-info">
                     <h3>Pane-mirage_2026041411</h3>
-                    <p>2026 장지에 아크릴 과슈 Acrylic gouache on two-ply Jangji (Korean paper) 240×110 cm</p>
+                    <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 240 × 110 cm</p>
                 </div>
             </div>
 
-
-            <!-- 4. Pane-mirage_2025051816 -->
-            <div class="artwork-card">
-                <img src="assets/main-work.png"
-                     alt="Pane-mirage_2025051816">
-
+            <!-- 6. Pane-mirage_2025051816 -->
+            <div class="artwork-card pane-card">
+                <a href="2025051816.html">
+                    <img
+                        data-arena-filename="main-work.png"
+                        alt="Pane-mirage_2025051816">
+                </a>
                 <div class="artwork-info">
                     <h3>Pane-mirage_2025051816</h3>
-                    <p>2026 장지에 아크릴 과슈 Acrylic gouache on two-ply Jangji (Korean paper) 240×110 cm</p>
+                    <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 240 × 110 cm</p>
                 </div>
             </div>
 
+        </div>
 
-            <!-- 5. windowstrike -->
-            <div class="artwork-card">
-              <a href="windowstrike.html">
-                 <img src="assets/windowstrike_2025051816.png" alt="windowstrike_2025051816">
-              </a>
 
-              <div class="artwork-info">
-          <h3>windowstrike_2025051816</h3>
-        <p>2025 장지에 아크릴 과슈 Acrylic gouache on two-ply Jangji (Korean paper)
-    185 × 66 cm</p>
+        <!-- 7. Sediment_P8020010 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="Sediment_P8020010"
+                alt="Sediment_P8020010">
+
+            <div class="artwork-info">
+                <h3>Sediment_P8020010</h3>
+                <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 90.9 × 72.7 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 8. sediment_P8020007 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="sediment_P8020007"
+                alt="sediment_P8020007">
+
+            <div class="artwork-info">
+                <h3>sediment_P8020007</h3>
+                <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 116.8 × 91 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 9. flattening_0069 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="flattening_0069.heic"
+                alt="flattening_0069">
+
+            <div class="artwork-info">
+                <h3>flattening_0069.heic</h3>
+                <p>2026, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 195 × 80 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 10. windowstrike_2025051816 -->
+        <div class="artwork-card">
+            <a href="windowstrike.html">
+                <img
+                    data-arena-filename="windowstrike_2025051816.png"
+                    alt="windowstrike_2025051816">
+            </a>
+
+            <div class="artwork-info">
+                <h3>windowstrike_2025051816</h3>
+                <p>2025, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 185 × 66 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 11. hand_P9210017 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="hand_P9210017.jpg"
+                alt="hand_P9210017">
+
+            <div class="artwork-info">
+                <h3>hand_P9210017.jpg</h3>
+                <p>2025, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 192 × 53.5 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 12. hand_P7110009 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="hand_P7110009.jpg.png"
+                alt="hand_P7110009">
+
+            <div class="artwork-info">
+                <h3>hand_P7110009.jpg</h3>
+                <p>2025, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 192 × 53.5 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 13. 이미지 열화시키기_아빠 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="이미지 열화시키기_아빠"
+                alt="이미지 열화시키기_아빠">
+
+            <div class="artwork-info">
+                <h3>이미지 열화시키기_아빠</h3>
+                <p>2025, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 185 × 66 cm</p>
+            </div>
+        </div>
+
+
+        <!-- 14. 이미지 열화시키기_눈 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="이미지 열화시키기_눈"
+                alt="이미지 열화시키기_눈">
+
+            <div class="artwork-info">
+                <h3>이미지 열화시키기_눈</h3>
+                <p>2025, 좌) 장지에 분채, 우) 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 42 × 59.4 cm</p>
+            </div>
+        </div>
+
+
+       
+<!-- 15. Ceramic extension 4 -->
+<div class="artwork-card ceramic-card ceramic-4">
+    <img
+        data-arena-filename="Ceramic extension 4.png"
+        alt="Ceramic extension 4">
+
+    <div class="artwork-info">
+        <h3>Ceramic extension 4</h3>
+        <p>2025, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 90.9 × 72.7 cm</p>
     </div>
 </div>
 
-    </main>
+
+<!-- 16. Ceramic extension 2 -->
+<div class="artwork-card ceramic-card ceramic-2">
+    <img
+        data-arena-filename="Ceramic extension 2.png"
+        alt="Ceramic extension 2">
+
+    <div class="artwork-info">
+        <h3>Ceramic extension 2</h3>
+        <p>2025, 장지에 아크릴 과슈, Acrylic gouache on two-ply Jangji (Korean paper), 45.4 × 15.8 cm</p>
+    </div>
+</div>
+
+
+<!-- 17. Ceramic extension 1 -->
+<div class="artwork-card ceramic-card ceramic-1">
+    <img
+        data-arena-filename="Ceramic extension 1_.png"
+        alt="Ceramic extension 1">
+
+    <div class="artwork-info">
+        <h3>Ceramic extension 1</h3>
+        <p></p>
+    </div>
+</div>
+ <!-- 18. 언니 귀 -->
+        <div class="artwork-card">
+            <img
+                data-arena-filename="언니 귀"
+                alt="언니 귀">
+
+            <div class="artwork-info">
+                <h3>언니 귀</h3>
+                <p>2025, 장지에 분채, 29.7 × 21 cm</p>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+
+
+
+
+<!-- JavaScript 연결 -->
 <script src="assets/js/script.js"></script>
+
 
 </body>
 </html>

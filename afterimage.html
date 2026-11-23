@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pane-mirage_afterimage — okseoyeon</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- 상단 메뉴 -->
+    <header class="header">
+
+        <div class="logo">
+            <a href="index.html">okseoyeon</a>
+        </div>
+
+        <nav class="navigation">
+            <a href="work.html">work</a>
+            <a href="#" id="cv-open">cv</a>
+            <a href="#" id="contact-open">contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="detail-main">
+
+        <!-- Contact 팝업 -->
+        <div class="contact-modal" id="contact-modal">
+
+            <div class="contact-window">
+
+                <button class="contact-close" id="contact-close">×</button>
+
+                <h2>contact</h2>
+
+                <div class="contact-links">
+
+                    <a href="mailto:ok402ooo@gmail.com">
+                        ok402ooo@gmail.com
+                    </a>
+
+                    <a href="https://www.instagram.com/ok.sy.oo.o/"
+                       target="_blank">
+                        @ok.sy.oo.o
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CV 팝업 -->
+        <div class="cv-modal" id="cv-modal">
+
+            <div class="cv-window">
+
+                <button class="cv-close" id="cv-close">×</button>
+
+                <div class="cv-language">
+                    <button class="active" data-lang="eng">ENG</button>
+                    <button data-lang="kor">KOR</button>
+                </div>
+
+
+                <!-- English CV -->
+                <div class="cv-content" id="cv-eng">
+
+                    <section class="cv-profile">
+                        <h2>ok seoyeon</h2>
+                        <p>b. 2003, Seoul-based artist</p>
+                    </section>
+
+                    <section class="cv-section">
+
+                        <h2>Group Exhibitions</h2>
+
+                        <div class="cv-entry">
+                            <span>2025</span>
+                            <p>
+                                Some Words Are Conveyed Without a Mouth,
+                                Baeryeom House, Seoul
+                            </p>
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+                <!-- Korean CV -->
+                <div class="cv-content" id="cv-kor" hidden>
+
+                    <section class="cv-profile">
+                        <h2>옥서연</h2>
+                        <p>2003년생, 서울 거주 및 활동</p>
+                    </section>
+
+                    <section class="cv-section">
+
+                        <h2>단체전</h2>
+
+                        <div class="cv-entry">
+                            <span>2025</span>
+                            <p>
+                                어떤 말들은 입 없이 전해지고,
+                                배렴가옥, 서울
+                            </p>
+                        </div>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- 작품 정보 -->
+        <section class="detail-info">
+
+            <h1>Pane-mirage_afterimage</h1>
+            <p>2026</p>
+            <p>장지에 아크릴 과슈</p>
+            <p>Acrylic gouache on two-ply Jangji (Korean paper)</p>
+            <p>240 × 110 cm</p>
+
+        </section>
+
+
+        <!-- 작품 이미지: 배경 - 부분 - 가로 -->
+        <section class="detail-images">
+
+            <!-- 배경 -->
+            <img
+  src="assets/work/afterimage(배경-확장).png"
+  alt="Pane-mirage afterimage background"
+  style="width: 70%; margin-top: 100px;"
+>
+            <!-- 부분 -->
+            <img
+  src="assets/work/afterimage(부분).png"
+  alt="Pane-mirage afterimage detail"
+  style="width: 70%;"
+>
+
+            <!-- 가로 -->
+            <img
+  src="assets/work/afterimage(부분-가로).png"
+  alt="Pane-mirage afterimage horizontal detail"
+  style="width: 70%;"
+>
+        </section>
+
+    </main>
+
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

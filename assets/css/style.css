@@ -487,3 +487,197 @@ body * {
     font-weight: 400;
     font-variant-numeric: lining-nums tabular-nums;
 }
+
+
+
+
+
+
+/* ========================================
+   WORK PAGE GRID
+======================================== */
+
+.artwork-grid {
+    display: grid;
+
+    /* 전체 좌우 여백 100px 고정 */
+    width: calc(100% - 440px);
+    max-width: none;
+    margin: 0 auto;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 50px;
+
+    align-items: start;
+}
+
+
+
+/* ========================================
+   PANE-MIRAGE : ONE CONTINUOUS ROW
+   이미지 크기, 간격, 좌우 여백 유지
+======================================== */
+
+.artwork-grid .pane-row {
+    grid-column: 1 / -1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 100%;
+    margin: 0;
+
+    container-type: inline-size;
+}
+
+/* 각 카드의 폭을 이미지 기준으로 제한 */
+.artwork-grid .pane-row .pane-card {
+    flex: 0 0 auto;
+    width: min-content;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* 링크도 이미지 폭에 맞춤 */
+.artwork-grid .pane-row .pane-card > a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+}
+
+/* 네 작품 이미지 높이 통일 */
+.artwork-grid .pane-row .pane-card img {
+    display: block;
+
+    height: calc((100cqw - 30px) / 1.75);
+    width: auto;
+    max-width: none;
+
+    object-fit: contain;
+    object-position: center top;
+}
+
+/* 캡션은 각 이미지의 실제 폭 안에서 줄바꿈 */
+.artwork-grid .pane-row .pane-card .artwork-info {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
+
+.artwork-grid .pane-row .pane-card .artwork-info h3,
+.artwork-grid .pane-row .pane-card .artwork-info p {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 800px) {
+    .artwork-grid {
+        width: calc(100% - 40px);
+    }
+}
+
+/* ========================================
+   WORK PAGE : CAPTION TEXT WRAPPING
+   기존 이미지 배열과 크기는 유지
+======================================== */
+
+/* 작품 정보가 이미지 카드 폭을 넘지 않도록 */
+.artwork-grid .artwork-info {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* 제목 */
+.artwork-grid .artwork-info h3 {
+    display: block;
+    width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/* 연도, 재료, 크기 */
+.artwork-grid .artwork-info p {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* 4연작 카드도 이미지 폭에 맞춰 캡션 제한 */
+.artwork-grid .pane-row .pane-card {
+    min-width: 0;
+}
+
+.artwork-grid .pane-row .pane-card .artwork-info {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+}
+
+/* ========================================
+   VITRINE : IMAGE HEIGHT MATCH
+======================================== */
+
+/* 첫 번째와 두 번째 작품의 이미지 높이 통일 */
+.artwork-grid > .artwork-card:nth-child(1) img,
+.artwork-grid > .artwork-card:nth-child(2) img {
+    height: 42vw;
+    max-height: 657px;
+    width: 100%;
+
+    object-fit: contain;
+    object-position: center top;
+}
+
+
+
+
+/* ========================================
+   CERAMIC EXTENSION
+======================================== */
+
+/* 세 작품의 이미지 높이 통일 */
+.artwork-grid .ceramic-card img {
+    display: block;
+
+    height: clamp(220px, 25vw, 320px);
+    width: auto;
+    max-width: 100%;
+
+    object-fit: contain;
+    object-position: left top;
+}
+
+/* 작품 정보는 각 그리드 칸 안에서 줄바꿈 */
+.artwork-grid .ceramic-card .artwork-info {
+    width: 100%;
+    overflow-wrap: anywhere;
+}
